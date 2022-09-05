@@ -48,6 +48,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3050320220729001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3050320220729001",
     "echarts": "^5.3.3",
+    "pinia": "^2.0.21",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -57,6 +58,7 @@
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3050320220729001",
     "@dcloudio/uni-stacktracey": "3.0.0-alpha-3050320220729001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3050320220729001",
+    "@types/node": "^18.7.14",
     "eslint": "^8.23.0",
     "postcss": "^8.4.16",
     "sass": "^1.54.8",
