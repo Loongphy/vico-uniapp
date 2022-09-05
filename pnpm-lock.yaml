@@ -19,8 +19,10 @@ specifiers:
   '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3050320220729001
   '@dcloudio/uni-stacktracey': 3.0.0-alpha-3050320220729001
   '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3050320220729001
+  echarts: ^5.3.3
   eslint: ^8.23.0
   postcss: ^8.4.16
+  sass: ^1.54.8
   typescript: ^4.7.4
   unplugin-auto-import: ^0.11.2
   vite: ^2.9.14
@@ -39,6 +41,7 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': 3.0.0-alpha-3050320220729001_postcss@8.4.16+vue@3.2.37
   '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3050320220729001_postcss@8.4.16+vue@3.2.37
   '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3050320220729001_postcss@8.4.16+vue@3.2.37
+  echarts: 5.3.3
   vue: 3.2.37
 
 devDependencies:
@@ -50,9 +53,10 @@ devDependencies:
   '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3050320220729001_42uryyx4zz7ipqpduc3x5ruwfq
   eslint: 8.23.0
   postcss: 8.4.16
+  sass: 1.54.8
   typescript: 4.8.2
   unplugin-auto-import: 0.11.2_vite@2.9.14
-  vite: 2.9.14
+  vite: 2.9.14_sass@1.54.8
 
 packages:
 
@@ -947,7 +951,7 @@ packages:
       hash-sum: 2.0.0
       jsonc-parser: 3.2.0
       picocolors: 1.0.0
-      vite: 2.9.14
+      vite: 2.9.14_sass@1.54.8
     transitivePeerDependencies:
       - postcss
       - supports-color
@@ -1270,7 +1274,7 @@ packages:
       magic-string: 0.26.3
       regenerator-runtime: 0.13.9
       systemjs: 6.12.6
-      vite: 2.9.14
+      vite: 2.9.14_sass@1.54.8
     dev: true
 
   /@vitejs/plugin-vue-jsx/1.3.10:
@@ -1294,7 +1298,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.14
+      vite: 2.9.14_sass@1.54.8
       vue: 3.2.37
 
   /@vue/babel-helper-vue-transform-on/1.0.2:
@@ -1882,6 +1886,13 @@ packages:
       domelementtype: 2.3.0
       domhandler: 5.0.3
     dev: true
+
+  /echarts/5.3.3:
+    resolution: {integrity: sha512-BRw2serInRwO5SIwRviZ6Xgm5Lb7irgz+sLiFMmy/HOaf4SQ+7oYqxKzRHAKp4xHQ05AuHw1xvoQWJjDQq/FGw==}
+    dependencies:
+      tslib: 2.3.0
+      zrender: 5.3.2
+    dev: false
 
   /ee-first/1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
@@ -2912,6 +2923,9 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable/4.1.0:
+    resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -3931,6 +3945,15 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
+  /sass/1.54.8:
+    resolution: {integrity: sha512-ib4JhLRRgbg6QVy6bsv5uJxnJMTS2soVcCp9Y88Extyy13A8vV0G1fAwujOzmNkFQbR3LvedudAMbtuNRPbQww==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.1.0
+      source-map-js: 1.0.2
+
   /scule/0.3.2:
     resolution: {integrity: sha512-zIvPdjOH8fv8CgrPT5eqtxHQXmPNnV/vHJYffZhE43KZkvULvpCTvOt1HPlFaCZx287INL9qaqrZg34e8NgI4g==}
     dev: true
@@ -4184,6 +4207,10 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
+  /tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+    dev: false
+
   /tsutils/3.21.0_typescript@4.8.2:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
@@ -4319,7 +4346,7 @@ packages:
     dependencies:
       acorn: 8.8.0
       chokidar: 3.5.3
-      vite: 2.9.14
+      vite: 2.9.14_sass@1.54.8
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.4
     dev: true
@@ -4364,7 +4391,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite/2.9.14:
+  /vite/2.9.14_sass@1.54.8:
     resolution: {integrity: sha512-P/UCjSpSMcE54r4mPak55hWAZPlyfS369svib/gpmz8/01L822lMPOJ/RYW6tLCe1RPvMvOsJ17erf55bKp4Hw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -4384,6 +4411,7 @@ packages:
       postcss: 8.4.16
       resolve: 1.22.1
       rollup: 2.79.0
+      sass: 1.54.8
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -4511,3 +4539,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zrender/5.3.2:
+    resolution: {integrity: sha512-8IiYdfwHj2rx0UeIGZGGU4WEVSDEdeVCaIg/fomejg1Xu6OifAL1GVzIPHg2D+MyUkbNgPWji90t0a8IDk+39w==}
+    dependencies:
+      tslib: 2.3.0
+    dev: false
