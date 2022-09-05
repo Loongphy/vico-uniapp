@@ -50,10 +50,8 @@ const option = ref({
       name: '热度',
       type: 'bar',
       label: {
-        normal: {
-          show: true,
-          position: 'inside',
-        },
+        show: true,
+        position: 'inside',
       },
       data: [300, 270, 340, 344, 300, 320, 310],
     },
@@ -62,9 +60,7 @@ const option = ref({
       type: 'bar',
       stack: '总量',
       label: {
-        normal: {
-          show: true,
-        },
+        show: true,
       },
       data: [120, 102, 141, 174, 190, 250, 220],
     },
@@ -73,17 +69,21 @@ const option = ref({
       type: 'bar',
       stack: '总量',
       label: {
-        normal: {
-          show: true,
-          position: 'left',
-        },
+        show: true,
+        position: 'left',
       },
       data: [-20, -32, -21, -34, -90, -130, -110],
     },
   ],
 })
 const chart = ref()
+const loading = ref(false)
 const click = () => {
+  loading.value = true
+  // Simulate time-consuming operations
+  setTimeout(() => {
+    loading.value = false
+  }, 3000)
   chart.value.setOption({
     xAxis: {
       type: 'category',

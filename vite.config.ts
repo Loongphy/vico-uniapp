@@ -6,11 +6,14 @@ import AutoImport from 'unplugin-auto-import/vite'
 export default defineConfig({
   plugins: [
     uni(),
+
+    // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
         'vue',
         'uni-app',
       ],
+      dts: 'src/auto-imports.d.ts',
     }),
   ],
 })
