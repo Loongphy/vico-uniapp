@@ -31,8 +31,10 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3050320220729001",
@@ -54,6 +56,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.26.3",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@dcloudio/types": "^3.0.13",
     "@dcloudio/uni-automator": "3.0.0-alpha-3050320220729001",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3050320220729001",
@@ -61,6 +65,8 @@
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3050320220729001",
     "@types/node": "^18.7.14",
     "eslint": "^8.23.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.16",
     "sass": "^1.54.8",
     "typescript": "^4.7.4",
