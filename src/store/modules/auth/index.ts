@@ -15,14 +15,19 @@ export const useAuthStore = defineStore('auth', {
   },
   actions: {
     loadToken() {
-      this.token = localStorage.getItem('token') || ''
+      uni.getStorage({
+        key: 'token',
+        success: (res) => {
+          this.token = res.data
+        },
+      })
     },
     setToken(token: string) {
-      localStorage.setItem('token', token)
+      uni.setStorage({ key: 'token', data: token })
       this.token = token
     },
     clearToken() {
-      localStorage.removeItem('token')
+      uni.removeStorage({ key: 'token' })
       this.token = ''
     },
     async login(params: LoginReqParams) {

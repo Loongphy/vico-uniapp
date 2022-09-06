@@ -12,7 +12,13 @@ export const http = new Request({
 http.interceptors.request.use((config) => {
   // 登录拦截
   if (config.custom?.auth) {
-    const token = localStorage.getItem('token')
+    let token = ''
+    uni.getStorage({
+      key: 'storage_key',
+      success(res) {
+        token = res.data
+      },
+    })
     if (token) {
       if (!config.header)
         config.header = {}
