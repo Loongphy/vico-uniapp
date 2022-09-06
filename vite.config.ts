@@ -5,8 +5,10 @@ import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  alias: {
-    '@': resolve('./src'),
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
   },
   plugins: [
     uni(),
