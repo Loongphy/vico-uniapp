@@ -2,7 +2,7 @@ import type { AuthState } from './types'
 import type { LoginReqParams } from '@/api/auth/types'
 import { login, logout } from '@/api/auth'
 
-export const useAuthState = defineStore('auth', {
+export const useAuthStore = defineStore('auth', {
   state: (): AuthState => {
     return {
       token: '',
@@ -29,7 +29,7 @@ export const useAuthState = defineStore('auth', {
       try {
         const { data } = await login(params)
         this.setToken(data.token)
-        uni.switchTab({ url: '/pages/index/index' })
+        uni.navigateTo({ url: '/pages/index/index' })
       }
       catch (err) {
         this.clearToken()
@@ -42,7 +42,7 @@ export const useAuthState = defineStore('auth', {
       }
       finally {
         this.clearToken()
-        // uni.switchTab({ url: '/pages/login/index' })
+        uni.navigateTo({ url: '/pages/login/index' })
       }
     },
   },
